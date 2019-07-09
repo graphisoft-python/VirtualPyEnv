@@ -1,0 +1,17 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: notify
+    image: beanjs/drone-wxpusher
+    settings:
+      ids: 
+        from_secret: uids
+      title: |
+        BIM开发组：${DRONE_COMMIT_AUTHOR_NAME}
+        项目名称：${DRONE_REPO_NAME}
+        项目地址：${DRONE_GIT_HTTP_URL}
+      remark: |
+        分支：${DRONE_BRANCH}
+        ${DRONE_COMMIT_MESSAGE} 
+      subtitle_text:  工作日志
