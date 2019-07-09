@@ -5,3 +5,5 @@ RO
 *.pdb
 *.res
 *.pyc
+*.iobj
+*.ipdb
