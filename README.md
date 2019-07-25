@@ -53,6 +53,6 @@ VirtualPyEnv is a plugin for the Python runtime environment in ARCHICAD. Virtual
 
 ## Archicad Modules
 
-* [GSRoot(v:0.0.1 Beta)](https://github.com/graphisoft-python/GSRoot)
-* [DGLib(v:0.0.1 Beta)](https://github.com/graphisoft-python/DGLib)
+* [GSRoot(0.0.2)](https://github.com/graphisoft-python/GSRoot)
+* [DGLib(0.0.2)](https://github.com/graphisoft-python/DGLib)
 
