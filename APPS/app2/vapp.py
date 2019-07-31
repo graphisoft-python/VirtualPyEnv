@@ -12,7 +12,8 @@ class vMain(object):
             while self.isRun:
                 print "vAppName:"+sys.vAppName
                 time.sleep(3)    
-        
+            print "td_func stop"
+            
         self.isRun=True
         self.td=Thread(target=td_func)
         print 'RegisterInterface'
@@ -24,5 +25,5 @@ class vMain(object):
     def FreeData(self):
         self.isRun=False
         #self.td.join()
-        self.td=None
+        #self.td=None
         print 'FreeData'
