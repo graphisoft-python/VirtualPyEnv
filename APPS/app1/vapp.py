@@ -47,3 +47,6 @@ class vMain(object):
     def pnl_lost(self,ev):
         print "--pnl_lost--"
         print sys.vAppName
+
+    def ToolsContextMenuRequested(self,ev):
+        print ev.Invoke([u"L1888823",u"-","K456789",u"M789"])

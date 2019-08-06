@@ -22,23 +22,52 @@ VirtualPyEnv is a plugin for the Python runtime environment in ARCHICAD. Virtual
 * Run pip --version in Terminal. Verify that Pip is installed successfully
 * Installation completed
 
-## Usage
+## Environment Variable
+
+* sys.vAppName -> unicode
+* sys.vAppId -> short
+* sys.vAppMode -> unicode (Reboot or Normal)
+* sys.vExport -> iTerm.ACExport
+
+## Internal Module
+
+### ContextMenu
+
+* [Menu](./docs/ContextMenu/Menu.md)
+* [MenuItem](./docs/ContextMenu/MenuItem.md)
+* [MenuSeparatorItem](./docs/ContextMenu/MenuSeparatorItem.md)
+* [MenuPopupItem](./docs/ContextMenu/MenuPopupItem.md)
+* [MenuSimpleItemBase](./docs/ContextMenu/MenuSimpleItemBase.md)
+* [MenuSimpleItem](./docs/ContextMenu/MenuSimpleItem.md)
+* [ToolsContextMenuRequestedEvent](./docs/ContextMenu/ToolsContextMenuRequestedEvent.md)
+
+#### StaticMethods
+```
+Invoke(Menu) -> unicode
+```
+
+### iTerm
+
+* [Logger](./docs/Logger.md)
+* [ACExport](./docs/ACExport.md)
 
 
 
 ## Feature
 
- [x] python 2.7 env
+[x] python 2.7 env
 
- [x] multi-thread
+[x] multi-thread
 
- [x] reboot vapp(virtual application)
+[x] reboot vapp(virtual application)
 
- [ ] auto install requirements
+[x] tools context menu
 
- [ ] auto update vapp(virtual application)
+[ ] auto install requirements
 
- [ ] vapp(virtual application) market
+[ ] auto update vapp(virtual application)
+
+[ ] vapp(virtual application) market
 
 ## Directories
 
