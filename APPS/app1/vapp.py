@@ -23,7 +23,7 @@ class vMain(object):
 
         self.pnl.BeginEventProcessing()
         self.pnl.Show()
-        self.pnlobs=DGLib.PanelObserver(self.pnl,sys.vExport)
+        self.pnlobs=DGLib.PanelObserver(self.pnl)
         self.pnlobs.PanelResizing=self.pnl_resize
         self.pnlobs.PanelTopStatusLost=self.pnl_lost
         #self.pnl.EnableIdleEvent()
@@ -34,19 +34,16 @@ class vMain(object):
         print 'Initialize'
 
     def FreeData(self):
-        self.pnlid=None
-        self.pnl=None
-        self.pnlobs=None
         print 'FreeData'
 
     def pnl_resize(self,ev):
         print "--pnl_resize--"
         print "H:"+str(ev.GetHorizontalChange())+",V:"+str(ev.GetVerticalChange())
-        print sys.vAppName
+        print sys.vAppInfo.GetName()
 
     def pnl_lost(self,ev):
         print "--pnl_lost--"
-        print sys.vAppName
+        print sys.vAppInfo.GetName()
 
     def ToolsContextMenuRequested(self,ev):
         print ev.Invoke([u"L1888823",u"-","K456789",u"M789"])
