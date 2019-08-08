@@ -24,10 +24,7 @@ VirtualPyEnv is a plugin for the Python runtime environment in ARCHICAD. Virtual
 
 ## Environment Variable
 
-* sys.vAppName -> unicode
-* sys.vAppId -> short
-* sys.vAppMode -> unicode (Reboot or Normal)
-* sys.vExport -> iTerm.ACExport
+* sys.vAppInfo -> APPInfo
 
 ## Internal Module
 
@@ -49,7 +46,7 @@ Invoke(Menu) -> unicode
 ### iTerm
 
 * [Logger](./docs/Logger.md)
-* [ACExport](./docs/ACExport.md)
+* [APPInfo](./docs/APPInfo.md)
 
 
 
