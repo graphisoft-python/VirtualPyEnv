@@ -40,7 +40,7 @@ VirtualPyEnv is a plugin for the Python runtime environment in ARCHICAD. Virtual
 
 #### StaticMethods
 ```
-Invoke(Menu) -> unicode
+Invoke(Menu,DGLib.Point) -> unicode
 ```
 
 ### iTerm
