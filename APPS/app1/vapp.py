@@ -2,6 +2,7 @@
 
 import GSRoot
 import DGLib
+import Graphix
 import sys
 
 class vMain(object):
@@ -15,17 +16,32 @@ class vMain(object):
                 DGLib.NativeUnit(0),
                 DGLib.NativeUnit(0)
             ),
-            400,
             600,
+            800,
             self.pnlid,
             DGLib.Dialog.GrowType.HVGrow
         )
 
         self.pnl.BeginEventProcessing()
         self.pnl.Show()
+
+        pic=DGLib.Icon("./c.jpg")
+        self.img=DGLib.IconItem(
+            self.pnl,
+            DGLib.Rect(
+                DGLib.Point(4,4),
+                414,
+                122
+            )
+        )
+        self.img.SetIcon(pic)
+        self.img.Show()
+        
+
         self.pnlobs=DGLib.PanelObserver(self.pnl)
         self.pnlobs.PanelResizing=self.pnl_resize
         self.pnlobs.PanelTopStatusLost=self.pnl_lost
+        self.pnl.SetTitle("python图片测试")
         #self.pnl.EnableIdleEvent()
         #help(DGLib.PanelObserver)
         print 'RegisterInterface'
