@@ -60,6 +60,8 @@ Invoke(Menu,DGLib.Point) -> unicode
 
 [x] tools context menu
 
+[x] auto install python2.7 runtime
+
 [ ] auto install requirements
 
 [ ] auto update vapp(virtual application)
