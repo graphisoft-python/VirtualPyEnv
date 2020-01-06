@@ -10,17 +10,7 @@ VirtualPyEnv is a plugin for the Python runtime environment in ARCHICAD. Virtual
 
 ## Install
 
-* Install Archicad 
-* Download Git（ https://git-scm.com ）
-* Install Git（Check Use Git and optional Unix tools from Windows Command Prompt ）
-* Run git --version in Terminal. Verify that Git is installed successfully（Shift+MouseRight）
-* Start the terminal in the [Archicad Install Path]/Add-Ons directory
-* Clone Project ( git clone https://github.com/graphisoft-python/VirtualPyEnv.git )
-* Install the Python runtime environment（./Env/python-2.7.15.amd64.msi）
-* Set Add python.exe to Path to Will be installed on local hard drive in the Customize Python tab during installation.
-* Run python --version in Terminal. Verify that Python is installed successfully(python version must 2.7.15)
-* Run pip --version in Terminal. Verify that Pip is installed successfully
-* Installation completed
+* [youtube video](https://www.youtube.com/watch?v=A6ZU1-Rs7Hg)
 
 ## Environment Variable
 
@@ -40,7 +30,7 @@ VirtualPyEnv is a plugin for the Python runtime environment in ARCHICAD. Virtual
 
 #### StaticMethods
 ```
-Invoke(Menu,DGLib.Point) -> unicode
+ContextMenu.Invoke(Menu,DGLib.Point) -> unicode
 ```
 
 ### iTerm
@@ -48,7 +38,46 @@ Invoke(Menu,DGLib.Point) -> unicode
 * [Logger](./docs/Logger.md)
 * [APPInfo](./docs/APPInfo.md)
 
+### ACAPI
 
+* [NotifyEventID](./docs/ACAPI/NotifyEventID.md)
+
+
+## vMain
+```python
+import ACAPI
+import ContextMenu
+class vMain(object):
+    def __init__(self):
+        # single notifyProject mask set
+        # self.notifyProjectMask=ACAPI.NotifyEventID.Open
+        # mulite notifyProject mask set
+        # self.notifyProjectMask=ACAPI.NotifyEventID.Open|ACAPI.NotifyEventID.Close
+        pass
+
+    # AC tools context menu request
+    # def ToolsContextMenuRequested(self,ev):
+    #     print ev.Invoke([u"L1888823",u"-","K456789",u"M789"]) 
+
+    # AC Plugin hook
+    # def RegisterInterface(self):
+    #     pass
+
+    # AC Plugin hook
+    # def Initialize(self):
+    #     pass
+
+    # AC Plugin hook
+    # def FreeData(self):
+    #     pass
+
+    # AC notify project event hook
+    # def OnNotifyProjectEvent(self,notifId):
+    #     if notifId == ACAPI.NotifyEventID.Open:
+    #         pass
+    #     pass
+
+```
 
 ## Feature
 
@@ -81,6 +110,13 @@ Invoke(Menu,DGLib.Point) -> unicode
 
 ## Archicad Modules
 
-* [GSRoot(0.0.2)](https://github.com/graphisoft-python/GSRoot)
-* [DGLib(0.0.2)](https://github.com/graphisoft-python/DGLib)
+* [GSRoot](https://github.com/graphisoft-python/GSRoot)
+* [DGLib](https://github.com/graphisoft-python/DGLib)
+* [Graphix](https://github.com/graphisoft-python/Graphix)
+* [ACTextEngine](https://github.com/graphisoft-python/ACTextEngine)
+* [ACDGGraphix](https://github.com/graphisoft-python/ACDGGraphix)
+* [ACEnvironment](https://github.com/graphisoft-python/ACEnvironment)
 
+## Archicad Export
+
+* [ACExport](https://github.com/graphisoft-python/ACExport)
