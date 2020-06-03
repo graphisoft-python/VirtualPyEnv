@@ -12,9 +12,9 @@ class vMain(object):
     def RegisterInterface(self):
         self.pnlid=GSRoot.Guid()
         self.pnl=DGLib.Palette(
-            DGLib.NativePoint(
-                DGLib.NativeUnit(0),
-                DGLib.NativeUnit(0)
+            GSRoot.Point(
+                0,
+                0
             ),
             600,
             800,
@@ -28,8 +28,8 @@ class vMain(object):
         pic=DGLib.Icon("./c.jpg")
         self.img=DGLib.IconItem(
             self.pnl,
-            DGLib.Rect(
-                DGLib.Point(4,4),
+            GSRoot.Rect(
+                GSRoot.Point(4,4),
                 414,
                 122
             )
@@ -41,7 +41,7 @@ class vMain(object):
         self.pnlobs=DGLib.PanelObserver(self.pnl)
         self.pnlobs.PanelResizing=self.pnl_resize
         self.pnlobs.PanelTopStatusLost=self.pnl_lost
-        self.pnl.SetTitle("python图片测试")
+        self.pnl.SetTitle(u"python图片测试")
         #self.pnl.EnableIdleEvent()
         #help(DGLib.PanelObserver)
         print 'RegisterInterface'

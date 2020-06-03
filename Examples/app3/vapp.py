@@ -10,7 +10,7 @@ class vMain(object):
     def RegisterInterface(self):
         def td_func():
             while self.isRun:
-                print "vAppName:"+sys.vAppName
+                print "vAppName:"+sys.vAppInfo.GetName()
                 time.sleep(3)    
         
         self.isRun=True
